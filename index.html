@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLATPACK</title>
+    <link rel="shortcut icon"  href="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/favicon.ico" />
+    <style>
+        .First{
+            background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url("https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/image-intro.jpg") ;
+            height: 700px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: cover;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .Header{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            padding: 22px;
+            padding-left: 300px;
+        }
+        .Services, .Recipes, .Reservernow, #icon{
+            padding-top: 4px;
+            justify-content: center;
+            transition: all 0.5s;
+        }
+        .Services:hover, .Recipes:hover, .Reservernow:hover, #icon:hover, a:hover{
+            color: #9c9696;
+        }
+        .Services{
+            padding-left: 300px;
+        }
+        a{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 19px;
+            font-weight: bold;
+            transition: all 0.5s;
+        }
+        #icon{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .landingPage{
+            padding-left: 120p;
+            font-family: 'Open Sans',sans-serif;
+        }
+        .Lan1{
+            padding-top: 130px;
+            text-align: center;
+            font-size: 48px;
+            line-height: 52px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .Lan2{
+            padding-top: 20px;
+            padding-left: 400px;
+            padding-right: 400px;
+            text-align: center;
+            font-size: 22px;
+            line-height: 30px;
+            font-family: 'Open Sans',  sans-serif;
+            color: #bbb;
+        }
+        .btn{
+            border: 3px #fff solid;
+            height: 30px ;
+            width: 270px;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding: 20px;
+            margin: none;
+            justify-content: center;
+            margin-left: 600px;
+            margin-top: 40px;
+            font-family: 'Open Sans',  sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        .btn:hover{
+            border-color: #ffffffce;
+            color: #d9d3d3ce;
+        }
+        .intro_arrow , .intro_arrow:hover{
+            border: 2px solid #fff;
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            line-height: 60px;
+            font-size: 30px;
+            margin: 30px 0;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        #icon1{
+            padding-left: 19px;
+            font-size: 30px;
+            font-weight: 10px;
+        }
+        .Down{
+            margin: none;
+            margin-top: 100px;
+            align-items: center;
+            margin-left: 730px;
+            font-size: 40px;
+        }
+        .Second{
+            padding-left: 70px;
+        }
+        .S-One{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 0px 100px;
+            margin-top: 50px;
+
+        }
+        .S-txt1{
+            padding-left: 100px;
+            width: 600px;
+            font-family: 'Open Sans',  sans-serif;
+            font-size: 48px;
+            line-height: 52px;
+            font-weight: bold;
+            color: #444;
+        }
+        .S-txt2{
+            padding-top: 10px;
+            padding-right: 150px;
+            width: 600px;
+            font-family: 'Open Sans',  sans-serif;
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: bold;
+            color: #bbb;
+        }
+        .S-Three{
+            padding-top: 40px;
+            margin: none;
+            margin-left: 200px;
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            margin-right: 200px;
+        }
+        .S-R1{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding:4px;
+            width: 280px;
+            height: 100%;
+           
+        }
+        .R1-img{
+            align-items: center;
+            padding-left: 40px;
+            padding-bottom: 3px;
+        }
+        .R1-H{
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-weight: bold;
+            font-family: 'Open Sans',  sans-serif;
+            color: #444;
+        }
+        .R1-txt{
+            font-size: 16px;
+            display: inline-block;
+            font-weight: bold;
+            font-family: 'Open Sans',  sans-serif;
+            color: #999;
+            padding-bottom: 10px;
+        }
+        .R1-icon{
+            font-size: normal;
+            height: 3px;
+            font-weight: 0px;
+        }
+        .R1-btn{
+            color: #f77825;
+        }
+        .R1-btn{
+            border: 2px #f77825 solid;
+            width: 140px;
+            padding: 2px;
+            text-align: center;
+            justify-self: center;
+            justify-content: center;
+            padding-top: 4px;
+            height: 28px;
+            border-radius: 5px;
+        }
+        .R1-btn:hover{
+            border-color: #e48c50c1;
+            color: #e69058C1;
+        }
+        .t{
+            padding-top: 2px;
+        }
+        .R-icon{
+            font-size: 2px;
+        }
+        .Four{
+            margin-top: 60px;
+            height: 250px;
+            background-color: #f3f3f3;
+        }
+        .Four{
+            display: flex;
+            flex-direction:row;
+            gap: 60px;
+            padding-left: 280px;
+            align-items: center;
+        }
+        
+        .Four-H{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 200px;
+        }
+        .F-H{
+            font-family: 'Open Sans',  sans-serif;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .F-txt{
+            font-family: 'Open Sans',  sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            color: #bbb;
+        }
+        .Five-One{
+            background-image: url("https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/hl-6.jpg");
+            background-attachment: scroll;
+            background-attachment: fixed;
+        }
+        .Five-One1{
+            width: 30%;
+            background-color: white;
+            margin: none;
+            padding-left: 300px;
+        }
+        .Five-H{
+            padding-top: 80px;
+            font-size: 48px;
+            line-height: 52px;
+            font-family: 'Open Sans',  sans-serif;
+            color: #444;
+        }
+        .Sub{
+            color: #f77825;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+            font-family: 'Open Sans',  sans-serif;
+            padding:15px 0px;
+        }
+        .Min-sub{
+            font-size: 16px;
+            line-height: 24px;
+            color: #999;
+            margin: 0px 0px 20px 0px;
+            padding-right: 70px;
+            text-align: justify;
+        }
+        .Five-btn{
+            border: 3px #333 solid;
+            color: #333;
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 3px;
+            margin: 5px 0;
+            display: inline-block;
+            margin-bottom: 60px;
+            transition: all 0.5s;
+        }
+        .Five-btn:hover{
+            border-color: #333333a1;
+            color: #333333a1;
+        }
+        .Five-Two{
+            background-image: url("https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/hl-7.jpg");
+            background-attachment: scroll;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: cover;
+            background-size: cover;
+        }
+        .Five-Two2{
+            width: 30%;
+            margin: none;
+            margin-left: 50%;
+            background-color: white;
+            margin: none;
+            width:45.5%;
+            padding-left: 70px;
+        }
+        .Five-H1{
+            padding-top: 80px;
+            font-size: 48px;
+            line-height: 52px;
+            font-family: 'Open Sans',  sans-serif;
+            color: #444;
+            padding-right: 300px;
+        }
+        .Sub1{
+            color: #f77825;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+            font-family: 'Open Sans',  sans-serif;
+            padding:15px 0px;
+            padding-right: 300px;
+        }
+        .Min-sub1{
+            font-size: 16px;
+            line-height: 24px;
+            color: #999;
+            margin: 0px 0px 20px 0px;
+            text-align: justify;
+            padding-right: 300px;
+        }
+        .S-One1{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 0px 160px;
+            padding-top: 60px;
+
+        }
+        .Eight{
+            font-family: 'Open Sans',  sans-serif;
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+            justify-content: center;
+            padding-top: 80px;
+        }
+        .Ei-img{
+            border: none;
+            border-radius: 50%;
+        }
+        .Ei-One{
+            border: none;
+            width: 460px;
+            text-align: center;
+            justify-content: center;
+        }
+        .Ei-txt{
+            padding-top: 14px;
+            color: #999;
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 10px;
+        }
+        h6{
+            color:#222;
+            font-family: 'Open Sans',  sans-serif;
+
+        }
+        .Fix{
+            background-color: #f3f3f3;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+        .Fin2{
+            background-color: #333333;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+        }
+        .Fin-img{
+            padding-left: 690px;
+            padding-top: 30px;
+        }
+        .Res{
+            font-family: 'Open Sans',  sans-serif;
+            font-size: 48px;
+            line-height: 52px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .Re-txt{
+            padding-top: 20px;
+            color: #999;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            padding-left: 450px;
+            padding-right: 450px;
+        }
+        .Reslink{
+            border: 2px #f77825 solid;
+            padding: 15px;
+            color: #f77825;
+            justify-content: center;
+            margin-left: 627px;
+            transition: all 0.3s;
+        }
+        .Reslink:hover{
+            border-color: #f77925a8;
+            color: #f77825a8;
+        }
+
+        .Fin{
+            background-color: #444;
+            height: 140px;
+            
+        }
+        .Fin1{
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+        }
+        #img3{
+            margin-left: 280px;
+            padding: 30px;
+        }
+        .para1{
+            color: #999;
+            font-size: 18px;
+            line-height: 24px;
+            padding-top: 30px;
+            padding-right:  30px;
+            padding-left: 20px;
+        }
+        
+        .iconss{
+            padding-top: 40px;
+            margin-right: 250px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        #icon2, #icon3, #icon4{
+            color: #999;
+            font-size: 40px;
+
+        }
+        #icon2, #icon3, #icon4{
+            color: #999;
+            transition: all 0.3s;
+        }
+        #icon2:hover{
+            color: #d8d1d1;
+        }
+        #icon3:hover{
+            color: #d8d1d1;
+            
+        }
+        #icon4:hover{
+            color: #d8d1d1;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="Entire">
+
+
+        <div class="First">
+            <dic class="Header">
+                <img src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/logo-dark.png" >
+                <div class="Services"><a href="#Second">Services</a></div>
+                <div class="Recipes"><a href="#Five">Recipes</a></div>
+                <div class="Reservernow"><a href="">Reserve Now</a></div>
+                <i id="icon" class="fa-brands fa-facebook-f"></i>
+                <i id="icon" class="fa-brands fa-twitter"></i>
+                <i id="icon" class="fa-brands fa-instagram"></i>
+            </dic>
+            <div class="landingPage">
+                <div class="Lan1">Restaurant Landing Page</div>
+                <div class="Lan2"> From logo design to website development, hand-picked designers and developers are ready to complete.</div>
+                <div class="btn"><i class="fa-solid fa-sheet-plastic"></i><span class="btn-txt">Make a Reservation</span></div>
+            </div>
+            <div class="Down">
+                <a href=" " class="intro_arrow">
+                    <i id="icon1" class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="Second" id="Second">
+            <div class="S-One">
+                <div class="S-txt1">Make Awesome Heading Section</div>
+                <div class="S-txt2">From logo design to website development, hand-picked designers and developers are ready to complete your new project.</div>
+            </div>
+            <div class="S-Three">
+                <div class="S-R1">
+                    <img width="150" class="R1-img" src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/r1.png">
+                    <div class="R1-H">Fast Food</div>
+                    <div class="R1-txt">Lorem ipsum dolor sit Seamlessly empower fully researched growth strategies interoperable internal.</div>
+                    <a href="" class="R1-btn"><i id="R1-icon" class="fa-regular fa-clipboard"></i>&nbsp;&nbsp;<span class="t">Order Meal</span></a>
+                </div>
+                <div class="S-R1">
+                    <img width="150" class="R1-img" src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/r2.png">
+                    <div class="R1-H">Drinks & Snacks</div>
+                    <div class="R1-txt">Lorem ipsum dolor sit Seamlessly empower fully researched growth strategies interoperable internal.</div>
+                    <a href="" class="R1-btn"><i id="R-icon" class="fa-solid fa-tag"></i>&nbsp;&nbsp;<span class="t">Order Meal</span></a>
+                </div>
+                <div class="S-R1">
+                    <img width="150" class="R1-img" src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/r3.png">
+                    <div class="R1-H">Main Menu Food</div>
+                    <div class="R1-txt">Lorem ipsum dolor sit Seamlessly empower fully researched growth strategies interoperable internal.</div>
+                    <a href="" class="R1-btn"><i id="R1-icon" class="fa-regular fa-flag"></i>&nbsp;&nbsp;<span class="t">Order Meal</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="Four">
+            <div class="Four-H">
+                <div class="F-H">How Trust PixFort</div>
+                <div class="F-txt">The Best Companies Which Trust Our Digital Goods</div>
+            </div>
+            <div class="F-imgs">
+                <img src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/logos/bigcommerce.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/logos/foursquare.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/logos/squarespace.png">
+            </div>
+        </div>
+
+        <div class="Five" id="Five">
+            <div class="Five-One">
+                <div class="Five-One1">
+                    <div class="Five-H">Restaurant High Quality Services</div>
+                    <div class="Sub">BOOK YOUR SEAT ONLINE</div>
+                    <div class="Min-sub">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</div>
+                    <a href="" class="Five-btn"><i class="fa-regular fa-bookmark"></i>&nbsp;&nbsp;&nbsp;Bookmark Recipes</a>
+                </div>
+            </div>
+            <div class="Five-Two">
+                <div class="Five-Two2">
+                    <div class="Five-H1">Delicious Meals Weekly in Inbox</div>
+                    <div class="Sub1">OUR SERVICE IS TOTALLY FREE</div>
+                    <div class="Min-sub1">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</div>
+                    <a href="" class="Five-btn"><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;&nbsp;Add to Favorits</a>
+                </div>
+            </div>
+        </div>
+<div class="Fix">
+        <div class="Seven" style="background-color: #f3f3f3;">
+            <div class="S-One1">
+                <div class="S-txt1">Make Awesome Heading Section</div>
+                <div class="S-txt2">From logo design to website development, hand-picked designers and developers are ready to complete your new project.</div>
+            </div>
+        </div>
+
+        <div class="Eight">
+            <div class="Ei-One">
+                <img class="Ei-img" src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/t3.png" >
+                <div class="Ei-txt">Lorem ipsum dolor sit amet consectet adipiscing elit sed do eiusmoda tempo incididunt ut labore et dolore magnar aliqua Ut enim ad voluptate velit esse.</div>
+                <div class="Ei-name"><h4>Mark Smith</h4></div>
+            </div>
+            <div class="Ei-One">
+                <img class="Ei-img" src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/t2.png" >
+                <div class="Ei-txt">Lorem ipsum dolor sit amet consectet adipiscing elit sed do eiusmoda tempo incididunt ut labore et dolore magnar aliqua Ut enim ad voluptate velit esse.</div>
+                <div class="Ei-name"><h4>John DUe</h4></div>
+            </div>
+        </div>
+</div>
+
+        <div class="Fin2">
+            <img class="Fin-img" src="./Images/1.jpg">
+            <div class="Res">Visit Our Restaurant </div>
+            <div class="Re-txt">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmoda tempor incididunt dolor sit amet consectetur.            </div><br><br><br>
+            <a href="" class="Reslink">RESERVATION POPUP</a>
+        </div>
+
+        <div class="Fin">
+            <div class="Fin1">
+                <img id="img3" height="70"  src="https://pixfort.website/themeforest/landing/flatpack/22_restaurant/images/main/footer-logo-4-dark.png">
+                <div class="para1">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmoda tempor incididunt consectetur adipiscing elit.            </div>
+                <div class="iconss">
+                <i class="fa-brands fa-facebook" id="icon2" ></i> 
+                <i class="fa-brands fa-twitter" id="icon3"></i>
+                <i class="fa-brands fa-google-plus" id="icon4"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
